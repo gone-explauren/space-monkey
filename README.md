@@ -1,6 +1,6 @@
 # space-monkey
 
-## Authors: Laurel, Kam, Ryan
+## Authors: [Laurel](https://github.com/gone-explauren), [Kam](https://github.com/KamWatts), [Ryan](https://github.com/Ryanb021)
 
 # Preparation #1 
 
@@ -52,6 +52,16 @@ We also want to master the skill of breaking problems down into smaller pieces.
 
 6. Decide if pair programming, mob programming, and split programming will be necessary for any of the tasks.
 
+## Conflict Plan
+
+### Conflict Resolution Plan
+
+1. Walk away, take a break
+2. Get a hot cup of coffee or drink of water
+3. Come back, huddle, and discuss the issue
+4. Strive for a resolution and understanding
+5. If need be, get some outside help such as a TA or instructor
+
 ### If someone is taking over the project too much:
 
 We will address the issue with the team member. If this team member seems to be more advanced and not feeling chellenged from the project, they will be asked to provide guidance to those who are not at their skill level. This will ensure everyone is included.
@@ -66,7 +76,11 @@ We will discuss what tasks they can take and if that person is too overwhelmed, 
 
 Our team will reference documentation, learn from each other, and stay open-minded.
 
-## Community Plan
+### How and when will the conflict escalate if resolution attempts fail?
+
+We have a zero tolerance rule for escalation. 
+
+## Communication Plan
 
 ### Availability??
 
@@ -90,6 +104,7 @@ Staying open-minded and not talking over eachother. Being respectful to all idea
 
 ## Work Plan
 
+### Identifying ans assigning tasks
 We will identify tasks on the white board, assign tasks with skill in mind along with how the task should be completed in a group setting (navigator, driver, researcher).
 
 Extra guidelines will be input into the coding documentation as a TODO list. 
