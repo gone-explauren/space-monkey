@@ -2,6 +2,8 @@
 
 ## Authors: [Laurel](https://github.com/gone-explauren), [Kam](https://github.com/KamWatts), [Ryan](https://github.com/Ryanb021)
 
+### Objective: A fun, yet minimally interactive game featuring monkeys racing through space.
+
 # Preparation #1 
 
 ## Cooperation Plan 
