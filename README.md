@@ -2,6 +2,14 @@
 
 ## Authors: [Laurel](https://github.com/gone-explauren), [Kam](https://github.com/KamWatts), [Ryan](https://github.com/Ryanb021)
 
+## Project Overview 
+
+In this application, it will feature racing space/astronaut monkeys that orbit around the sun. The wins are measured in the best 2 out of 3 rounds with 3 laps in each round. The winning players information will render onto a leaderboard in another window along with the character they used. The players winning history will be stored and will automatically increment on the leaderboard each time they win.
+
+The app will feature a color scheme of blue, purple, green and black. There will be radial gradients on every webpage except where the game will be played in which will feature a starry overlay gradient over a black background.
+
+This app will be built using HTML, CSS, and JavaScript. In the future we hope to implement more features using reactJS for the opening page interface and graphQL to visually enhance the leaderboard. As well as two-player capabilities and audio functions to assist those who play our game with visual impairments.
+
 ### Objective: A fun, yet minimally interactive game featuring monkeys racing through space.
 
 # Preparation #1 
