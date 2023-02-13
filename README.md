@@ -18,7 +18,7 @@ This app will be built using HTML, CSS, and JavaScript. In the future we hope to
 
 ### What are the key strengths of the team?
 
-Lauren's strengths:
+Laurel's strengths:
 
 1. Writing JavaScript
 2. Wireframes
@@ -94,7 +94,7 @@ We have a zero tolerance rule for escalation.
 
 ### Availability??
 
-Lauren: No contact after 8pm
+Laurel: No contact after 8pm
 Ryan: No weekends
 Kam: Always available
 
