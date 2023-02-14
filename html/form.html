@@ -4,32 +4,46 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="/css/form.css">
   <title>Space Monkeys: The Game</title>
 </head>
-<header>SpaceMonkeys</header>
+<header>
+  <h1>SpaceMonkeys</h1>
+</header>
 <body>
+<div id="startForm">
+  <fieldset id="userQuestions">
+    <legend>Questions & Answers</legend>
+    <label for="questionOne">Random Question 1</label>
+    <input type="radio" name="first_question" list="questionone" id="questionOne">
+    <datalist>
+      
+    </datalist>
 
-  <h3 id="userQuestions">Questions</h3>
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+    <label for="questionTwo">Random Question 2</label>
+    <input type="radio" placeholder="Answer here" id="questiontwo">
+    <datalist>
+      
+    </datalist>
 
-  <h3 id="userAnswers">Answers</h3>
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+    <label for="questionThree">Random Question 3</label>
+    <input type="radio" placeholder="Answer here" id="questionThree">
+    <datalist>
+      
+    </datalist>
 
+    <label for="questionFour">Random Question 4</label>
+    <input type="radio" placeholder="Answer here" id="questionFour">
+    <datalist>
+      
+    </datalist>
+ 
+  </fieldset>
+</div>
   <button>Start Game</button>
-  <ul>
-    <li>Leaderboard</li>
-    <li>About Space Monkeys</li>
+  <ul class="nav-container">
+    <li><a href="/html/leaderboard.html">Leaderboard</a></li>
+    <li><a href="/html/about.html">About Space Monkeys</a></li>
   </ul>
 
 </body>

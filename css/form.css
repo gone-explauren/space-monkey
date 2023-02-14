@@ -14,3 +14,74 @@
   --layoutColor6: #090e51;
   --layoutColor7: #44008B;
 }
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Adobe Handwriting Tiffany';
+  font-size: 45pt;
+  font-weight: 900;
+  font-style:oblique;
+  color: var(--layoutColor5);
+}
+
+body {
+  background: var(--layoutColor6);
+}
+
+#startForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#userQuestions {
+  border: 2px solid var(--layoutColor5);
+  height:fit-content;
+  width:fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+button  {
+  margin:0 auto;
+  height: 45px;
+  width: 90px;
+  background-color: var(--layoutColor4);
+  font-family: 'Shader Inline', sans-serif;
+}
+
+label {
+  color: var(--layoutColor3);
+  font-family: 'Puffin Arcade', sans-serif;
+}
+
+ul {
+  list-style: none;
+  font-family: 'Shader Inline', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background: var(--layoutColor6);
+  color: var(--spaceMonkey2);
+}
+
+
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 30px;
+} 
