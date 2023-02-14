@@ -14,8 +14,3 @@
   --layoutColor6: #090e51;
   --layoutColor7: #44008B;
 }
-
-html, body {
-  box-sizing: border-box;
-  background-color: var(--layoutColor6);
-}
