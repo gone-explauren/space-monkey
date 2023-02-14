@@ -119,6 +119,7 @@ function renderQuestions() {
 	let randQ3 = randomQuestions.shift();
 	let randQ4 = randomQuestions.shift();
 
+
 	// add to the form
 	let username = document.createElement('input');
 	username.textContent('What is your name?');
@@ -549,6 +550,7 @@ function renderQuestions() {
 		q12a2.textContent(madA6);
 		answersDiv4.appendChild(q12a2);
 	}
+  
 };
 
 // TODO: add form
