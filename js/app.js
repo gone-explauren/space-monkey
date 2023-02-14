@@ -62,7 +62,7 @@ let q12 = "How many books have you read this year?";
 let hapA6 = "I've lost count!";
 let madA6 = "I read the inside of my Snapple cap if that counts.";
 
-//make sure the proper answers are rendered with each question
+// TODO: make sure the proper answers are rendered with each question!!
 allQuestions.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12);
 happyAnswers.push(hapA1, hapA2, hapA3, hapA4, hapA5, hapA6);
 madAnswers.push(madA1, madA2, madA3, madA4, madA5, madA6);
@@ -70,14 +70,14 @@ neutralAnswers.push(neutA1, neutA2, neutA3, neutA4, neutA5, neutA6);
 coolAnswers.push(coolA1, coolA2, coolA3, coolA4, coolA5, coolA6);
 
 
-// SpaceMonkey Constructor
+// TODO: SpaceMonkey Constructor
 function SpaceMonkey(img, orbit, speed) {
 	this.imgFile = img;
 	this.orbitPath = orbit;
 	this.spaceshipSpeed = speed;
 };
 
-// SpaceMonkey Instances
+// TODO: SpaceMonkey Instances
 let happyMonkey = new SpaceMonkey(
 
 );
@@ -100,7 +100,7 @@ let secretMonkey = new SpaceMonkey(
 
 // selectRandomQuestion function
 function selectRandomQuestion() {
-  return Math.floor(Math.random() * allQuestions.length);
+	return Math.floor(Math.random() * allQuestions.length);
 };
 
 // renderQuestions function
@@ -111,16 +111,51 @@ function renderQuestions() {
 		let randomQuestion = selectRandomQuestion();
 
 		if (!randomQuestions.includes(randomQuestion)) {
-      randomQuestion.push(randomQuestion);
-    }
+			randomQuestion.push(randomQuestion);
+		}
 	}
 	let randQ1 = randomQuestions.shift();
-  let randQ2 = randomQuestions.shift();
-  let randQ3 = randomQuestions.shift();
+	let randQ2 = randomQuestions.shift();
+	let randQ3 = randomQuestions.shift();
 	let randQ4 = randomQuestions.shift();
 
-	//populate the form with the questions and appropriate answers
-	
+	// TODO: populate the form with the questions and appropriate answers
+	if (randQ1 === q1 || randQ2 === q1 || randQ3 === q1 || randQ4 === q1){
+		// append Q1, coolA1, neutA1
+	}
+	else if (randQ1 === q2 || randQ2 === q2 || randQ3 === q2 || randQ4 === q2){
+		// append Q2, hapA1, neutA2
+	}
+	else if (randQ1 === q3 || randQ2 === q3 || randQ3 === q3 || randQ4 === q3){
+		// append Q3, coolA2, madA1
+	}
+	else if (randQ1 === q4 || randQ2 === q4 || randQ3 === q4 || randQ4 === q4){
+		// append Q4, hapA2, madA2
+	}
+	else if (randQ1 === q5 || randQ2 === q5 || randQ3 === q5 || randQ4 === q5){
+		// append Q5, coolA3, hapA3
+	}
+	else if (randQ1 === q6 || randQ2 === q6 || randQ3 === q6 || randQ4 === q6){
+		// append Q6, neutA3, madA3
+	}
+	else if (randQ1 === q7 || randQ2 === q7 || randQ3 === q7 || randQ4 === q7){
+		// append Q7, hapA4, coolA4
+	}
+	else if (randQ1 === q8 || randQ2 === q8 || randQ3 === q8 || randQ4 === q8){
+		// append Q8, neutA4, madA4
+	}
+	else if (randQ1 === q9 || randQ2 === q9 || randQ3 === q9 || randQ4 === q9){
+		// append Q9, coolA5, madA5
+	}
+	else if (randQ1 === q10 || randQ2 === q10 || randQ3 === q10 || randQ4 === q10){
+		// append Q10, hapA5, neutA5
+	}
+	else if (randQ1 === q11 || randQ2 === q11 || randQ3 === q11 || randQ4 === q11){
+		// append Q11, coolA6, neutA6
+	}
+	else if (randQ1 === q12 || randQ2 === q12 || randQ3 === q12 || randQ4 === q12){
+		// append Q12, hapA6, madA6
+	}
 };
 
 // selectCharacter function
@@ -132,42 +167,50 @@ function selectCharacter() {
 
 	for (let i = 0; i < userAnswers.length; i++) {
 
-		for (let j = 0; j < happyAnswers; j++) {
-			if (i === j) {
+		for (let j = 0; j < happyAnswers.length; j++) {
+			if (userAnswers[i] === happyAnswers[j]) {
 				happyScore++
 			};
 		};
-		for (let j = 0; j < madAnswers; j++) {
-			if (i === j) {
+		for (let j = 0; j < madAnswers.length; j++) {
+			if (userAnswers[i] === madAnswers[j]) {
 				madScore++
 			};
 		};
-		for (let j = 0; j < neutralAnswers; j++) {
-			if (i === j) {
+		for (let j = 0; j < neutralAnswers.length; j++) {
+			if (userAnswers[i] === neutralAnswers[j]) {
 				neutralScore++
 			};
 		};
-		for (let j = 0; j < coolAnswers; j++) {
-			if (i === j) {
+		for (let j = 0; j < coolAnswers.length; j++) {
+			if ([i] === [j]) {
 				coolScore++
 			};
 		};
 	}
+	// Create object literal of character scores...
+	return {
+		coolScore: coolScore,
+		neutralScore: neutralScore,
+		madScore: madScore,
+		happyScore: happyScore
+	}
+};
 
+function renderMonkey() {
 	if (happyScore > madScore && happyScore > neutralScore && happyScore > coolScore) {
-	// create a function for rendering the monkeys
-	renderHappyMonkey;
+		// TODO: happyMonkey	
 	}
 	else if (madScore > happyScore && madScore > neutralScore && madScore > coolScore) {
-	renderMadMonkey;
+		// TODO: madMonkey;
 	}
 	else if (neutralScore > happyScore && neutralScore > madScore && neutralScore > coolScore) {
-	renderNeutralMonkey;
+		// TODO: neutralMonkey;
 	}
 	else if (coolScore > happyScore && coolScore > madScore && coolScore > neutralScore) {
-	renderCoolMonkey;
+		// TODO: coolMonkey;
 	}
 	else {
-	renderSecretMonkey;
+		// TODO: secretMonkey;
 	}
 };
