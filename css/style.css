@@ -15,7 +15,33 @@
   --layoutColor7: #44008B;
 }
 
-html, body {
+* {
   box-sizing: border-box;
-  background-color: var(--layoutColor6);
+}
+body {
+  background: url(../img/SpaceBG.png);
+  position: relative;
+  border-style: ridge;
+  border-width: 15px;
+  height: 800px;
+  margin: auto;
+}
+.insideSpace {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 70px;
+  color: whitesmoke;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.spaceImages {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.navigation {
+  position: relative;
+  color: whitesmoke;
+  font-size: 20px;
+  text-align: center;
 }
