@@ -119,6 +119,10 @@ We will identify tasks on the white board, assign tasks with skill in mind along
 
 Extra guidelines will be input into the coding documentation as a TODO list. 
 
+## Design Plan
+
+(![Group Project - Space Monkeys](https://user-images.githubusercontent.com/71164703/218575326-d60fe3f0-6c1c-4040-9de6-83f917ea4ed6.jpeg))
+
 ## Project Management Tool
 
 GitHub Project Board
