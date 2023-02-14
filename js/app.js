@@ -128,29 +128,29 @@ function renderQuestions() {
 	q1h1.textContent(randQ1);
 	document.getElementById.startForm.appendChild(q1h1);
 
-	let answersDiv1 = document.createElement('div');
-	q1h1.appendChild(answersDiv1);
+	let answersDiv1 = document.createElement('ul');
+	document.getElementById.questionOne.appendChild(answersDiv1);
 
 	let q2h2 = document.createElement('h2');
 	q2h2.textContent(randQ2);
 	document.getElementById.startForm.appendChild.q2h2;
 
-	let answersDiv2 = document.createElement('div');
-	q2h2.appendChild(answersDiv2);
+	let answersDiv2 = document.createElement('ul');
+	document.getElementById.questionTwo.appendChild(answersDiv2);
 
 	let q3h3 = document.createElement('h3');
 	q3h3.textContent(randQ3);
 	document.getElementById.startForm.appendChild(q3h3);
 
-	let answersDiv3 = document.createElement('div');
-	q3h3.appendChild(answersDiv3);
+	let answersDiv3 = document.createElement('ul');
+	document.getElementById.questionThree.appendChild(answersDiv3);
 
 	let q4h4 = document.createElement('h4');
 	q4h4.textContent(randQ4);
 	document.getElementById.startForm.appendChild.q4h4;
 
-	let answersDiv4 = document.createElement('div');
-	q4h4.appendChild(answersDiv4);
+	let answersDiv4 = document.createElement('ul');
+	document.getElementById.questionFour.appendChild(answersDiv4);
 
 	// populate the form with the questions and appropriate answers
 	if (randQ1 === q1) {
