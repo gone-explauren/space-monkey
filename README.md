@@ -120,8 +120,17 @@ We will identify tasks on the white board, assign tasks with skill in mind along
 Extra guidelines will be input into the coding documentation as a TODO list. 
 
 ## Design Plan
+### Vision Board
+![Group Project - Space Monkeys](https://user-images.githubusercontent.com/71164703/218575326-d60fe3f0-6c1c-4040-9de6-83f917ea4ed6.jpeg)
 
-(![Group Project - Space Monkeys](https://user-images.githubusercontent.com/71164703/218575326-d60fe3f0-6c1c-4040-9de6-83f917ea4ed6.jpeg))
+### Wireframes
+![Space Monkeys - Wireframe: Home Page](https://user-images.githubusercontent.com/71164703/218816718-a29e96e3-1eb8-4709-8b59-bf138c49d3f6.png)
+![Space Monkeys - Wireframe: Form Page](https://user-images.githubusercontent.com/71164703/218817160-6098ee9f-bf4d-4ff6-807a-69e7bcf7ed8c.png)
+![Space Monkeys - Wireframe: Game Page](https://user-images.githubusercontent.com/71164703/218803891-bc898e70-9237-4558-bff5-3637c9f5df22.png)
+
+### Flow Chart
+
+![Freehand Flowchart](https://user-images.githubusercontent.com/71164703/218817705-77aafc86-ab56-4695-b192-2c4dcd50b680.png)
 
 ## Project Management Tool
 
