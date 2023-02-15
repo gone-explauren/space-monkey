@@ -11,7 +11,7 @@
   --layoutColor3: #1F8969;
   --layoutColor4: #820343;
   --layoutColor5: #DB2955;
-  --layoutColor6: #090e51;
+  --layoutColor6: #22265a;
   --layoutColor7: #44008B;
 }
 
@@ -93,4 +93,28 @@ a:hover {
 
 table {
   border: 4px solid var(--spaceMonkey2);
+}
+
+img {
+  width: 80px;
+  margin-right: 2rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#movingSelector {
+  border: 6px solid red;
+  width: 70px;
+  height: 70px;
+}
+
+#selectImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
