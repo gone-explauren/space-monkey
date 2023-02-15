@@ -52,7 +52,7 @@ let madA5 = "You couldn't pay me enough.";
 
 let q10 = "How much water have you drank today?";
 let hapA5 = "8 glasses and counting!";
-let neutA5 = "Oh, not enough. Thanks for the reminder."
+let neutA5 = "Oh, not enough. Thanks for the reminder.";
 
 let q11 = "Can you play an instrument?";
 let coolA6 = "I'm in a rock band.";
@@ -562,7 +562,7 @@ function renderQuestions() {
 };
 
 // TODO: render the form and all questions when Start button is clicked
-document.getElementById.pressStart.addEventListener('click', renderQuestions);
+document.getElementById('pressStart').addEventListener('click', renderQuestions);
 
 // selectCharacter function
 function selectCharacter() {
@@ -589,7 +589,7 @@ function selectCharacter() {
 			};
 		};
 		for (let j = 0; j < coolAnswers.length; j++) {
-			if ([i] === [j]) {
+			if (userAnswers[i] === coolAnswers[j]) {
 				coolScore++
 			};
 		};
@@ -605,36 +605,97 @@ function selectCharacter() {
 
 function renderMonkey() {
 	if (happyScore > madScore && happyScore > neutralScore && happyScore > coolScore) {
-		// TODO: happyMonkey	
+		// TODO select happyMonkey; target events??	
 	}
 	else if (madScore > happyScore && madScore > neutralScore && madScore > coolScore) {
-		// TODO: madMonkey;
+		// TODO: select madMonkey;
 	}
 	else if (neutralScore > happyScore && neutralScore > madScore && neutralScore > coolScore) {
-		// TODO: neutralMonkey;
+		// TODO: select neutralMonkey;
 	}
 	else if (coolScore > happyScore && coolScore > madScore && coolScore > neutralScore) {
-		// TODO: coolMonkey;
+		// TODO: select coolMonkey;
 	}
 	else {
-		// TODO: secretMonkey;
+		// TODO: select secretMonkey;
 	}
+	// TODO: save selection as a variable
+	let userCharacter = '';
 };
 
 
-// TODO: creat start button event after character is chosen
+// TODO: create start button event after character is chosen, countdown clock begins
+document.getElementById('gameStart').addEventListener('click', startTimer);
 
 // TODO: function to select a computer player (NOT the same character as human player, NOT secretMonkey, selected AFTER start button is pressed, before countdown)
+function computerPlayer() {
+	if (userCharacter === happyMonkey){
+		// randomly select between remaining monkeys
+		let madNeutCoolArray = [madMonkey, neutralMonkey, coolMonkey];
+		return Math.floor(Math.random() * madNeutCoolArray.length);
+	}
+	else if (userCharacter === madMonkey){
+		let hapNeutCoolArray = [happyMonkey, neutralMonkey, coolMonkey];
+		return Math.floor(Math.random() * hapNeutCoolArray.length);
+	}
+	else if (userCharacter === neutralMonkey){
+		let hapMadCoolArray = [happyMonkey, madMonkey, coolMonkey];
+		return Math.floor(Math.random() * hapMadCoolArray.length);
+	}
+	else if (userCharacter === coolMonkey){
+		let hapMadNeutArray = [happyMonkey, madMonkey, neutralMonkey];
+		return Math.floor(Math.random() * hapMadNeutArray.length);
+	}
+	// TODO: save selection as a variable
+	let computerCharacter = '';
+};
 
-// TODO: create 3..2..1.. countdown to start race
+
+// TODO: create countdown ID in html: <div id="countdown"></div>
+// credit: https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
+let timeleft = 3;
+let startTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(startTimer);
+    document.getElementById("countdown").innerHTML = "Begin!";
+  } else {
+    document.getElementById("countdown").innerHTML = timeleft;
+  }
+  timeleft -= 1;
+}, 1000);
+// TODO: how to call this function? at the right time? Right time = when gameStart button is clicked
 
 // TODO: function to track laps (3 laps per round)
+function trackLaps() {
+	while (laps <= 3) {
+		// laps ++ when the characters pass a certain point
+	}
+}
 
 // TODO: function to track rounds (3 rounds per game)
-
-// TODO: function to track wins
+function trackRounds() {
+	while (rounds <= 3) {
+		if (laps === 3) {
+			rounds ++;
+		}
+	}
+	if (rounds === 4) {
+		// if (userCharacter wins?) {
+		//	wins ++
+		// }
+		// else {
+			// display "too bad" message
+		// }
+	}
+};
 
 // TODO: push winner username and wins to empty array
+function saveWinner() {
+	// if (userCharacter wins) {
+		// winnersArray.push(username);
+		// totalWinsArray.push(wins);
+	//	}
+}
 
 
 // saving data to local storage
