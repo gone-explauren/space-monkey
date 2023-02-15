@@ -650,6 +650,21 @@ function computerPlayer() {
 	let computerCharacter = '';
 };
 
+// TODO: press spacebar to pause game
+// credit: https://gist.github.com/MTDdk/ab068da7021b43de0041d74657884c7a
+
+var gamePlay = document.getElementById('player');
+
+if (gamePlay) {
+  window.addEventListener('keydown', function (event) {
+    var key = event.which || event.keyCode
+    if (key === 32) { // spacebar
+      event.preventDefault();
+      player.paused ? player.play() : player.pause()
+		}
+	});
+};
+
 
 // TODO: create countdown ID in html: <div id="countdown"></div>
 // credit: https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
@@ -670,7 +685,7 @@ function trackLaps() {
 	while (laps <= 3) {
 		// laps ++ when the characters pass a certain point
 	}
-}
+};
 
 // TODO: function to track rounds (3 rounds per game)
 function trackRounds() {
@@ -695,7 +710,7 @@ function saveWinner() {
 		// winnersArray.push(username);
 		// totalWinsArray.push(wins);
 	//	}
-}
+};
 
 
 // saving data to local storage
@@ -705,7 +720,7 @@ function saveUserData() {
 
 	// label it ('the key') and store it
 	localStorage.setItem('userData', stringify);
-}
+};
 
 // get data from localStorage
 function pageLoad() {
@@ -724,7 +739,8 @@ function pageLoad() {
 		// TODO: separate the parsed data and assign to variables?
 
 	}
-}
+};
+
 pageLoad();
 
 // renderLeaderboard function
@@ -744,4 +760,6 @@ function renderLeaderboard() {
 	let winnerTotalWinsLI = document.createElement('li');
 	// TODO: take the totalWinsArray out of local storage and meach each i into an li
 	winnerTotalWinsUL.appendChild(winnerTotalWinsLI);
-}
+};
+
+// TODO: call renderLeaderboard function when Leaderboard page loads
