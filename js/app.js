@@ -1,6 +1,7 @@
 'use strict'
 
 // Global variables
+let laps = 0;
 let rounds = 0;
 let wins = 0;
 
@@ -67,6 +68,9 @@ madAnswers.push(madA1, madA2, madA3, madA4, madA5, madA6);
 neutralAnswers.push(neutA1, neutA2, neutA3, neutA4, neutA5, neutA6);
 coolAnswers.push(coolA1, coolA2, coolA3, coolA4, coolA5, coolA6);
 
+// push wins into these arrays to save to local storage and render on the leaderbard
+let totalWinsArray = [];
+let winnersArray = [];
 
 // window to the DOM
 const characterSelectForm = document.querySelector("startForm");
@@ -79,7 +83,7 @@ function SpaceMonkey(img, orbit, speed) {
 	this.spaceshipSpeed = speed;
 };
 
-// TODO: SpaceMonkey Instances
+// TODO: SpaceMonkey Instances. Assign orbit?
 let happyMonkey = new SpaceMonkey(
 
 );
@@ -126,35 +130,36 @@ function renderQuestions() {
 	// add to the form
 	let username = document.createElement('input');
 	username.textContent('What is your name?');
-	document.getElementById.startForm.appendChild.username;
+	document.getElementById('startForm').appendChild.username;
+	// TODO: save username
 
 	let q1h1 = document.createElement('h1');
 	q1h1.textContent(randQ1);
-	document.getElementById.startForm.appendChild(q1h1);
+	document.getElementById('startForm').appendChild(q1h1);
 
 	let answersDiv1 = document.createElement('ul');
-	document.getElementById.questionOne.appendChild(answersDiv1);
+	document.getElementById('questionOne').appendChild(answersDiv1);
 
 	let q2h2 = document.createElement('h2');
 	q2h2.textContent(randQ2);
-	document.getElementById.startForm.appendChild.q2h2;
+	document.getElementById('startForm').appendChild.q2h2;
 
 	let answersDiv2 = document.createElement('ul');
-	document.getElementById.questionTwo.appendChild(answersDiv2);
+	document.getElementById('questionTwo').appendChild(answersDiv2);
 
 	let q3h3 = document.createElement('h3');
 	q3h3.textContent(randQ3);
-	document.getElementById.startForm.appendChild(q3h3);
+	document.getElementById('startForm').appendChild(q3h3);
 
 	let answersDiv3 = document.createElement('ul');
-	document.getElementById.questionThree.appendChild(answersDiv3);
+	document.getElementById('questionThree').appendChild(answersDiv3);
 
 	let q4h4 = document.createElement('h4');
 	q4h4.textContent(randQ4);
-	document.getElementById.startForm.appendChild.q4h4;
+	document.getElementById('startForm').appendChild.q4h4;
 
 	let answersDiv4 = document.createElement('ul');
-	document.getElementById.questionFour.appendChild(answersDiv4);
+	document.getElementById('questionFour').appendChild(answersDiv4);
 
 	// populate the form with the questions and appropriate answers
 	if (randQ1 === q1) {
@@ -556,7 +561,7 @@ function renderQuestions() {
   
 };
 
-// render the form and all questions when Start button is clicked
+// TODO: render the form and all questions when Start button is clicked
 document.getElementById.pressStart.addEventListener('click', renderQuestions);
 
 // selectCharacter function
@@ -617,10 +622,25 @@ function renderMonkey() {
 };
 
 
+// TODO: creat start button event after character is chosen
+
+// TODO: function to select a computer player (NOT the same character as human player, NOT secretMonkey, selected AFTER start button is pressed, before countdown)
+
+// TODO: create 3..2..1.. countdown to start race
+
+// TODO: function to track laps (3 laps per round)
+
+// TODO: function to track rounds (3 rounds per game)
+
+// TODO: function to track wins
+
+// TODO: push winner username and wins to empty array
+
+
 // saving data to local storage
 function saveUserData() {
 	// pack it.. 
-	let stringify = JSON.stringify(username, wins);
+	let stringify = JSON.stringify(winnersArray, totalWinsArray);
 
 	// label it ('the key') and store it
 	localStorage.setItem('userData', stringify);
@@ -636,11 +656,31 @@ function pageLoad() {
 	if (getUserData) {
 		// console.log(getUserData);
 
-		//unpack the data and change it back to JS from a string
+		// TODO: unpack the data and change it back to JS from a string
 		let parsedData = JSON.parse(getUserData);
 		// console.log(parsedData);
 
-		// separate the parsed data and assign to variables?
+		// TODO: separate the parsed data and assign to variables?
+
 	}
 }
 pageLoad();
+
+// renderLeaderboard function
+function renderLeaderboard() {
+	let winnerUsernameUL = document.createElement('ul');
+	winnerUsernameUL.textContent = "Winner";
+	document.getElementById('winnerUsername').appendChild(winnerUsernameUL);
+
+	let winnerTotalWinsUL = document.createElement('ul');
+	winnerTotalWinsUL.textContent = "Wins";
+	document.getElementById('winnerTotalWins').appendChild(winnerTotalWinsUL);
+
+	let winnerUsernameLI = document.createElement('li');
+	// TODO: take the winnersArray out of local storage and make each i into an li
+	winnerUsernameUL.appendChild(winnerUsernameLI);
+
+	let winnerTotalWinsLI = document.createElement('li');
+	// TODO: take the totalWinsArray out of local storage and meach each i into an li
+	winnerTotalWinsUL.appendChild(winnerTotalWinsLI);
+}
