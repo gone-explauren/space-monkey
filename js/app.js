@@ -5,6 +5,8 @@ let laps = 0;
 let rounds = 0;
 let wins = 0;
 
+let username = '';
+
 let allQuestions = [];
 
 let happyAnswers = [];
@@ -63,6 +65,7 @@ let hapA6 = "I've lost count!";
 let madA6 = "I read the inside of my Snapple cap if that counts.";
 
 allQuestions.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12);
+console.log(allQuestions);
 happyAnswers.push(hapA1, hapA2, hapA3, hapA4, hapA5, hapA6);
 madAnswers.push(madA1, madA2, madA3, madA4, madA5, madA6);
 neutralAnswers.push(neutA1, neutA2, neutA3, neutA4, neutA5, neutA6);
@@ -128,10 +131,13 @@ function renderQuestions() {
 
 
 	// add to the form
-	let username = document.createElement('input');
-	username.textContent('What is your name?');
-	document.getElementById('startForm').appendChild.username;
+	let usernameElement = document.createElement('input');
+	usernameElement.type = 'text';
+	usernameElement.textContent('What is your name?');
+	document.getElementById('startForm').appendChild.usernameElement;
 	// TODO: save username
+
+
 
 	let q1h1 = document.createElement('h1');
 	q1h1.textContent(randQ1);
@@ -562,7 +568,7 @@ function renderQuestions() {
 };
 
 // TODO: render the form and all questions when Start button is clicked
-document.getElementById.pressStart.addEventListener('click', renderQuestions);
+document.getElementById('pressStart').addEventListener('click', renderQuestions);
 
 // selectCharacter function
 function selectCharacter() {
