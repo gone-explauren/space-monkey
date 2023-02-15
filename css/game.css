@@ -48,13 +48,13 @@ body {
 
 #theInnerOrbit {
   position: absolute;
-  top: 75px;
-  left: 75px;
-  width: 150px;
-  height: 150px;
+  top:130px;
+  left: 395px;
+  width: 300px;
+  height: 300px;
   border: 2px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-left 5s ellipse infinite;
+  -webkit-animation: spin-right 5s linear infinite;
   animation: spin-left 10s ellipse infinite;
 }
 
@@ -69,11 +69,11 @@ body {
 }
 
 #theOuterOrbit {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 294px;
-  height: 294px;
+  position: relative;
+  top: 40px;
+  left: 295px;
+  width: 494px;
+  height: 494px;
   border: 2px #4A437F dashed;
   border-radius: 100%;
   -webkit-animation: spin-right 20s linear infinite;
@@ -81,7 +81,7 @@ body {
 }
 
 .outerOrbitCircles {
-  position: absolute;
+  position: relative;
   top: -17px;
   left: 125px;
   height: 30px;

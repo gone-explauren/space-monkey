@@ -85,3 +85,7 @@ a:hover {
   justify-content: space-evenly;
   margin-top: 30px;
 } 
+
+table {
+  border: 4px solid var(--spaceMonkey2);
+}

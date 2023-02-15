@@ -12,7 +12,6 @@ let neutralAnswers = [];
 let coolAnswers = [];
 let userAnswers = [];
 
-
 // Question variables
 let q1 = "Do you like to party?";
 let coolA1 = "I am the party!";
@@ -62,12 +61,15 @@ let q12 = "How many books have you read this year?";
 let hapA6 = "I've lost count!";
 let madA6 = "I read the inside of my Snapple cap if that counts.";
 
-// TODO: make sure the proper answers are rendered with each question!!
 allQuestions.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12);
 happyAnswers.push(hapA1, hapA2, hapA3, hapA4, hapA5, hapA6);
 madAnswers.push(madA1, madA2, madA3, madA4, madA5, madA6);
 neutralAnswers.push(neutA1, neutA2, neutA3, neutA4, neutA5, neutA6);
 coolAnswers.push(coolA1, coolA2, coolA3, coolA4, coolA5, coolA6);
+
+
+// window to the DOM
+const characterSelectForm = document.querySelector("startForm");
 
 
 // TODO: SpaceMonkey Constructor
@@ -95,8 +97,9 @@ let coolMonkey = new SpaceMonkey(
 );
 
 let secretMonkey = new SpaceMonkey(
-
+	
 );
+	
 
 // selectRandomQuestion function
 function selectRandomQuestion() {
@@ -553,9 +556,8 @@ function renderQuestions() {
   
 };
 
-// TODO: add form
-const characterSelectForm = document.querySelector("startForm");
-
+// render the form and all questions when Start button is clicked
+document.getElementById.pressStart.addEventListener('click', renderQuestions);
 
 // selectCharacter function
 function selectCharacter() {

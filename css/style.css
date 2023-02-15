@@ -1,3 +1,20 @@
+@import url("https://use.typekit.net/yna5rie.css"); /* Shader Inline, Nunito, Puffin Arcade, Adobe Handwriting Tiffany */
+
+:root {
+  --spaceMonkey1: #EE3700;
+  --spaceMonkey2: #29EE4A;
+  --spaceMonkey3: #940887;
+  --spaceMonkey4: #11AFA0;
+  --spaceMonkey5: #11AFA0;
+  --layoutColor1: #092327;
+  --layoutColor2: #645986;
+  --layoutColor3: #1F8969;
+  --layoutColor4: #820343;
+  --layoutColor5: #DB2955;
+  --layoutColor6: #090e51;
+  --layoutColor7: #44008B;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -167,6 +184,19 @@ body {
   margin-bottom: 0px;
 }
 */
+  border-width: 15px;
+  height: 800px;
+  margin: auto;
+}
+.insideSpace {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 70px;
+  color: whitesmoke;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
 .spaceImages {
   width: 100%;
   position: relative;
@@ -358,3 +388,4 @@ body {
   text-align: center;
   top: 0px;
 }
+
