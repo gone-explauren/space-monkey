@@ -89,13 +89,14 @@ let startTimer = setInterval(function () {
 	}
 	timeleft -= 1;
 }, 1000);
-// TODO: how to call this function? at the right time? Right time = when gameStart button is clicked / at page load for this page
 
-// TODO: function to track laps (3 laps per round)
+// function to track laps (3 laps per round)
+// reference/credit: https://developer.mozilla.org/en-US/docs/Web/API/setTimeout;
 function trackLaps() {
 	while (laps <= 3) {
-		// TODO: google set timeout 
-		// userCharacter.duration is one lap, laps ++;
+		setTimeout(function () {
+			laps++;
+		}, userCharacter.duration * 1000);
 	}
 };
 
@@ -153,6 +154,7 @@ function trackRounds() {
 
 // push winner username and wins to empty array
 // the user wins every time, the username is automatically pushed to the array.
+// two player capability stretch goal
 function saveWinner() {
 	if (rounds === 4) {
 		winnersArray.push(username);
