@@ -9,6 +9,7 @@ let wins = 0;
 let totalWinsArray = [];
 let winnersArray = [];
 
+// TODO: this needs to be parsed from local storage to be used on this page
 let userCharacter = null;
 
 // create start button event after character is chosen, countdown clock begins
@@ -29,27 +30,29 @@ function pageLoad() {
 		// console.log(parsedData);
 
 		// TODO: separate the parsed data and assign to variables?
-		
+		// what does parsedData console.log as? an array? object?
+		// we need to return the saved userCharacter and playerUsername
+
 	}
 };
 pageLoad();
 
 // function to select a computer player (NOT the same character as human player, NOT secretMonkey, selected AFTER start button is pressed, before countdown)
 function computerPlayer() {
-	if (userCharacter === happyMonkey){
+	if (userCharacter === happyMonkey) {
 		// randomly select between remaining monkeys
 		let madNeutCoolArray = [madMonkey, neutralMonkey, coolMonkey];
 		return Math.floor(Math.random() * madNeutCoolArray.length);
 	}
-	else if (userCharacter === madMonkey){
+	else if (userCharacter === madMonkey) {
 		let hapNeutCoolArray = [happyMonkey, neutralMonkey, coolMonkey];
 		return Math.floor(Math.random() * hapNeutCoolArray.length);
 	}
-	else if (userCharacter === neutralMonkey){
+	else if (userCharacter === neutralMonkey) {
 		let hapMadCoolArray = [happyMonkey, madMonkey, coolMonkey];
 		return Math.floor(Math.random() * hapMadCoolArray.length);
 	}
-	else if (userCharacter === coolMonkey){
+	else if (userCharacter === coolMonkey) {
 		let hapMadNeutArray = [happyMonkey, madMonkey, neutralMonkey];
 		return Math.floor(Math.random() * hapMadNeutArray.length);
 	}
@@ -59,16 +62,16 @@ function computerPlayer() {
 
 
 // TODO: press spacebar to pause game
-// credit: https://gist.github.com/MTDdk/ab068da7021b43de0041d74657884c7a
-
+// not functioning
+// reference/credit: https://gist.github.com/MTDdk/ab068da7021b43de0041d74657884c7a
 var gamePlay = document.getElementById('player');
 
 if (gamePlay) {
-  window.addEventListener('keydown', function (event) {
-    var key = event.which || event.keyCode
-    if (key === 32) { // spacebar
-      event.preventDefault();
-      player.paused ? player.play() : player.pause()
+	window.addEventListener('keydown', function (event) {
+		var key = event.which || event.keyCode
+		if (key === 32) { // spacebar
+			event.preventDefault();
+			player.paused ? player.play() : player.pause()
 		}
 	});
 };
@@ -77,22 +80,22 @@ if (gamePlay) {
 // create countdown ID in html:
 // credit: https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
 let timeleft = 3;
-let startTimer = setInterval(function(){
-  if(timeleft <= 0){
-    clearInterval(startTimer);
-    document.getElementById("countdown").innerHTML = "Begin!";
-  } else {
-    document.getElementById("countdown").innerHTML = timeleft;
-  }
-  timeleft -= 1;
+let startTimer = setInterval(function () {
+	if (timeleft <= 0) {
+		clearInterval(startTimer);
+		document.getElementById("countdown").innerHTML = "Begin!";
+	} else {
+		document.getElementById("countdown").innerHTML = timeleft;
+	}
+	timeleft -= 1;
 }, 1000);
-// TODO: how to call this function? at the right time? Right time = when gameStart button is clicked
+// TODO: how to call this function? at the right time? Right time = when gameStart button is clicked / at page load for this page
 
 // TODO: function to track laps (3 laps per round)
 function trackLaps() {
 	while (laps <= 3) {
-		// set timeout
-		// userCharacter.duration = laps ++;
+		// TODO: google set timeout 
+		// userCharacter.duration is one lap, laps ++;
 	}
 };
 
@@ -100,17 +103,50 @@ function trackLaps() {
 function trackRounds() {
 	while (rounds <= 3) {
 		if (laps === 3) {
-			rounds ++;
+			rounds++;
 		}
 	}
 	// this is currently set so the user wins every time. Change this with new updates to functionality :)
 	if (rounds === 4) {
 		if (userCharacter.duration < computerOrbit.duration) {
-			wins ++
-			// display "congrats" message
+			wins++
+
+
+			// TODO: test this popup to see if it works because I have no idea lol
+			// note the changes to game.html and the changes to game.css. Style customization has NOT been added
+			// reference/credit: https://stackoverflow.com/questions/40927216/how-to-create-custom-popup-without-any-click-event; 
+			// https://www.w3schools.com/code/tryit.asp?filename=FACIUK0W64HW;
+			var modal = document.getElementById("winPopup");
+			var span = document.getElementsByClassName("closeWin")[0];
+			document.addEventListener("DOMContentLoaded", function (event) {
+				modal.style.display = "block";
+			});
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function () {
+				modal.style.display = "none";
+			};
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function (event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			};
 		}
 		else {
-			// display "too bad" message
+			// TODO: test this
+			var modal = document.getElementById("losePopup"); 
+			var span = document.getElementsByClassName("closeLose")[0];
+			("DOMContentLoaded", function (event) {
+				modal.style.display = "block";
+			});
+			span.onclick = function () {
+				modal.style.display = "none";
+			};
+			window.onclick = function (event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			};
 		}
 	}
 };
