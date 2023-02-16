@@ -38,27 +38,19 @@ body {
     10px 0 80px #e7c816;
 }
 
-#space-circle-container {
-  position: relative;
-  top: 25px;
-  left: 25px;
-  height: 300px;
-  width: 300px;
-}
-
-#theInnerOrbit {
+#userOrbit {
   position: absolute;
   top:130px;
   left:260px;
-  width: 420px;
-  height: 420px;
+  width: 320px;
+  height: 320px;
   border: 4px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-right 40s linear infinite;
-  animation: spin-right 10s ellipse infinite;
+  -webkit-animation: spin-right 9s linear infinite;
+  animation: spin-right 5s ellipse infinite;
 }
 
-.innerOrbitCircles {
+.computerImage {
   position: absolute;
   top: 62px;
   left: -6px;
@@ -68,19 +60,19 @@ body {
   background-color: #9F98E6;
 }
 
-#theOuterOrbit {
+#computerOrbit {
   position: relative;
   top: 15px;
   left: 160px;
-  width: 424px;
-  height: 504px;
-  border: 4px #4A437F dashed;
+  width: 224px;
+  height: 224px;
+  border: 4px #4A437F dotted;
   border-radius: 100%;
   -webkit-animation: spin-right 40s linear infinite;
   animation: spin-right 20s linear infinite;
 }
 
-.outerOrbitCircles {
+.userImage {
   position: relative;
   top: -17px;
   left: 125px;
