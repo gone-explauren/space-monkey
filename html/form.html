@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,47 +11,46 @@
 <header>
   <h1>SpaceMonkeys</h1>
 </header>
+
 <body>
-<div id="startForm">
-  
-<form id="formListener">
-  <fieldset id="userQuestions">
-    <legend>Questions & Answers</legend>
-    <label for="inputusername">Username</label>
-    <input type="text" name="what_is_your_name" id="getusername">
+  <div id="startForm">
 
-    <label for="questionone">Random Question 1</label>
-    <input type="radio" name="first_question" id="questionone">
-    <input type="radio">
-    <datalist id="questionOne">
-      
-    </datalist>
+    <form id="formListener">
+      <fieldset id="userQuestions">
+        <legend>Questions & Answers</legend>
+        <label for="inputusername">Username</label>
+        <input type="text" name="what_is_your_name" id="getusername">
 
-    <label for="questiontwo">Random Question 2</label>
-    <input type="radio" id="questiontwo">
-    <input type="radio">
-    <datalist id="questionTwo">
-      
-    </datalist>
 
-    <label for="questionthree">Random Question 3</label>
-    <input type="radio" id="questionthree">
-    <input type="radio">
-    <datalist id="questionThree">
-      
-    </datalist>
 
-    <label for="questionfour">Random Question 4</label>
-    <input type="radio" id="questionfour">
-    <input type="radio">
-    <datalist id="questionFour">
-      
-    </datalist>
-    <br>
-    <button id="startGame"><a href="/html/game.html">Continue</a></button>
-  </fieldset>
-  </form>
-</div>
+
+        <label id="question1">Random Question 1</label>
+        <input type="radio" name="questionOne">
+        <label id="q1Answer1"></label>
+        <input type="radio" name="questionOne">
+        <label id="q1Answer2"></label>
+
+
+
+        <label id="question2">Random Question 2</label>
+        <input type="radio" id="q2Answer1" name="questionTwo">
+        <input type="radio" id="q2Answer2" name="questionTwo">
+        
+
+        <label id="question3">Random Question 3</label>
+        <input type="radio" id="q3Answer1" name="questionThree">
+        <input type="radio" id="q3Answer2" name="questionThree">
+        
+
+        <label id="question4">Random Question 4</label>
+        <input type="radio" id="q4Answer1" name="questionFour">
+        <input type="radio" id="q4Answer2" name="questionFour">
+        
+        <br>
+        <button id="startGame"><a href="/html/game.html">Continue</a></button>
+      </fieldset>
+    </form>
+  </div>
 
 
   <ul class="nav-container">
@@ -70,4 +70,5 @@
   <script src='../js/form.js'></script>
 
 </body>
+
 </html>
