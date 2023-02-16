@@ -93,33 +93,34 @@ function renderQuestions() {
 	// add to the form
 	let username = document.createElement('input');
 	username.textContent('What is your name?');
-	document.getElementById('startForm').appendChild.username;
-	// TODO: save username
+	document.getElementById('getusername').appendChild.username;
+	let playerUsername = input.toLowercase;
+	// console.log(playerUsername)
 
 	let q1h1 = document.createElement('h1');
 	q1h1.textContent(randQ1);
-	document.getElementById('startForm').appendChild(q1h1);
+	document.getElementById('questionone').appendChild(q1h1);
 
 	let answersDiv1 = document.createElement('ul');
 	document.getElementById('questionOne').appendChild(answersDiv1);
 
 	let q2h2 = document.createElement('h2');
 	q2h2.textContent(randQ2);
-	document.getElementById('startForm').appendChild.q2h2;
+	document.getElementById('questiontwo').appendChild(q2h2);
 
 	let answersDiv2 = document.createElement('ul');
 	document.getElementById('questionTwo').appendChild(answersDiv2);
 
 	let q3h3 = document.createElement('h3');
 	q3h3.textContent(randQ3);
-	document.getElementById('startForm').appendChild(q3h3);
+	document.getElementById('questionthree').appendChild(q3h3);
 
 	let answersDiv3 = document.createElement('ul');
 	document.getElementById('questionThree').appendChild(answersDiv3);
 
 	let q4h4 = document.createElement('h4');
 	q4h4.textContent(randQ4);
-	document.getElementById('startForm').appendChild.q4h4;
+	document.getElementById('questionfour').appendChild(q4h4);
 
 	let answersDiv4 = document.createElement('ul');
 	document.getElementById('questionFour').appendChild(answersDiv4);
@@ -521,13 +522,13 @@ function renderQuestions() {
 		q12a2.textContent(madA6);
 		answersDiv4.appendChild(q12a2);
 	}
-  
+  return playerUsername;
 };
 
-// TODO: render the form and all questions when Start button is clicked
+// render the form and all questions when Start button is clicked
 document.getElementById('pressStart').addEventListener('click', renderQuestions);
 
-// TODO: SpaceMonkey Constructor
+// SpaceMonkey Constructor
 function SpaceMonkey(name, img, duration, width, height) {
 	this.name = name
 	this.img = img;
@@ -538,10 +539,10 @@ function SpaceMonkey(name, img, duration, width, height) {
 
 // use DOM manipulation to attch a monkey to an orbit using a prototype method
 SpaceMonkey.prototype.setOribit = function() {
-	//animation duration
-	//width and height of orbit
-	//set image of monkey
-	//appedn to DOM
+	document.getElementById('userImage').style.backgroundImage = `url${this.img}`;
+	document.getElementById('userOrbit').style.animationDuration = this.duration;
+	document.getElementById('userOrbit').style.width = this.width;
+	document.getElementById('userOrbit').style.height = this.height;
 }
 
 // selectCharacter function
@@ -589,24 +590,40 @@ function renderMonkey() {
 	if (happyScore > madScore && happyScore > neutralScore && happyScore > coolScore) {
 		// let happyMonkey = new SpaceMonkey('pass in values');
 		name = 'happyMonkey';
-		img = 'filepath';
-		duration = '15s';
+		img = 'img/Happy.png';
+		duration = '10s';
 		width = 'width';
 		height = 'height';
 	}
 	else if (madScore > happyScore && madScore > neutralScore && madScore > coolScore) {
-		let madMonkey = new SpaceMonkey();
+		name = 'madMonkey';
+		img = 'img/Mad.png';
+		duration = '15s';
+		width = 'width';
+		height = 'height';
 	}
 	else if (neutralScore > happyScore && neutralScore > madScore && neutralScore > coolScore) {
-		let neutralMonkey = new SpaceMonkey();
+		name = 'neutralMonkey';
+		img = 'img/Neutral.png';
+		duration = '17s';
+		width = 'width';
+		height = 'height';
 	}
 	else if (coolScore > happyScore && coolScore > madScore && coolScore > neutralScore) {
-		let coolMonkey = new SpaceMonkey();
+		name = 'coolMonkey';
+		img = 'img/Cool.png';
+		duration = '12s';
+		width = 'width';
+		height = 'height';
 	}
 	else {
-		let secretMonkey = new SpaceMonkey();
+		name = 'secretMonkey';
+		img = 'img/Secret.png';
+		duration = '8s';
+		width = 'width';
+		height = 'height';
 	}
-	// TODO: save selection as a variable
+	// save selection as a variable
 	let userCharacter = SpaceMonkey(name, img, duration, width, height);
 	// invoke the methods on userCharacter
 	userCharacter.setOribit();
@@ -615,7 +632,7 @@ function renderMonkey() {
 // saving data to local storage
 function saveUserData() {
 	// pack it.. 
-	let stringify = JSON.stringify(userCharacter);
+	let stringify = JSON.stringify(userCharacter, playerUsername);
 
 	// label it ('the key') and store it
 	localStorage.setItem('userCharacter', stringify);
