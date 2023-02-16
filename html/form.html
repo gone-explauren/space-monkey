@@ -15,7 +15,7 @@
 <body>
   <div id="startForm">
 
-    <form id="formListener">
+    <form id="startGame">
       <fieldset id="userQuestions">
         <legend>Questions & Answers</legend>
         <label for="inputusername">Username</label>
@@ -24,30 +24,36 @@
 
 
 
-        <label id="question1">Random Question 1</label>
-        <input type="radio" name="questionOne">
-        <label id="q1Answer1"></label>
-        <input type="radio" name="questionOne">
-        <label id="q1Answer2"></label>
+        <label id="question1">Do you like to party?</label>
+        <input type="radio" name="questionOne" value="C">
+        <label id="q1Answer1">I am the party!</label>
+        <input type="radio" name="questionOne" value="N">
+        <label id="q1Answer2">Not really..</label>
 
 
 
-        <label id="question2">Random Question 2</label>
-        <input type="radio" id="q2Answer1" name="questionTwo">
-        <input type="radio" id="q2Answer2" name="questionTwo">
+        <label id="question2">Would you ever go skydiving?</label>
+        <input type="radio" id="q2Answer1" name="questionTwo" value="C">
+        <label id="q2Answer1">I go like, every weekend!</label>
+        <input type="radio" id="q2Answer2" name="questionTwo" value="M">
+        <label id="q2Answer2">You couldn't pay me enough.</label>
         
 
-        <label id="question3">Random Question 3</label>
-        <input type="radio" id="q3Answer1" name="questionThree">
-        <input type="radio" id="q3Answer2" name="questionThree">
+        <label id="question3">How did you sleep last night?</label>
+        <input type="radio" id="q3Answer1" name="questionThree" value="N">
+        <label id="q3Answer1">Like a baby</label>
+        <input type="radio" id="q3Answer2" name="questionThree" value="M">
+        <label id="q3Answer2">What's sleep?</label>
         
 
-        <label id="question4">Random Question 4</label>
-        <input type="radio" id="q4Answer1" name="questionFour">
-        <input type="radio" id="q4Answer2" name="questionFour">
+        <label id="question4">How many books have you read this year?</label>
+        <input type="radio" id="q4Answer1" name="questionFour" value="H">
+        <label id="q4Answer1">I've lost count!</label>
+        <input type="radio" id="q4Answer2" name="questionFour" value="M">
+        <label id="q4Answer2">I read the inside of my Snapple cap if that counts</label>
         
         <br>
-        <button id="startGame"><a href="/html/game.html">Continue</a></button>
+        <button>Start Game</button>
       </fieldset>
     </form>
   </div>
@@ -67,6 +73,7 @@
       <li><img src="/img/Neutral.png"></a></li>
     </ul>
   </footer>
+  <script src="../js/monkey.js"></script>
   <script src='../js/form.js'></script>
 
 </body>
