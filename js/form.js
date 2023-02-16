@@ -75,19 +75,21 @@ function selectRandomQuestion() {
 
 // renderQuestions function
 function renderQuestions() {
-	let randomQuestions = [];
+	let randomQuestionsArray = [];
 
-	while (randomQuestions.length < 8) {
+	while (randomQuestionsArray.length < 8) {
 		let randomQuestion = selectRandomQuestion();
 
-		if (!randomQuestions.includes(randomQuestion)) {
-			randomQuestion.push(randomQuestion);
+		if (!randomQuestionsArray.includes(randomQuestion)) {
+			randomQuestionsArray.push(randomQuestion);
 		}
 	}
-	let randQ1 = randomQuestions.shift();
-	let randQ2 = randomQuestions.shift();
-	let randQ3 = randomQuestions.shift();
-	let randQ4 = randomQuestions.shift();
+	let randQ1 = randomQuestionsArray.shift();
+	let randQ2 = randomQuestionsArray.shift();
+	let randQ3 = randomQuestionsArray.shift();
+	let randQ4 = randomQuestionsArray.shift();
+	// TODO: how do I turn this into the question and not just a number?
+	console.log(randQ1, randQ2, randQ3, randQ4);
 
 
 	// add to the form
@@ -95,6 +97,8 @@ function renderQuestions() {
 	username.id = 'usernameSubmit';
 	username.textContent = 'What is your name?';
 	document.getElementById('getusername').appendChild(username);
+	// how do I get this username from the answer?
+	let playerUsername = '';
 
 	let q1h1 = document.createElement('h1');
 	q1h1.textContent = randQ1;
@@ -525,7 +529,11 @@ function renderQuestions() {
 };
 
 // render the form and all questions when Start button is clicked
-document.getElementById('pressStart').addEventListener('click', renderQuestions);
+// document.getElementById('pressStart').addEventListener('click', renderQuestions);
+function pageLoad() {
+	renderQuestions();
+};
+pageLoad();
 
 
 
@@ -619,11 +627,18 @@ function renderMonkey() {
 		height = 'height';
 	}
 	else {
-		name = 'secretMonkey';
-		img = 'img/Secret.png';
-		duration = '8s';
+		// happyMonkey placeholder
+		name = 'happyMonkey';
+		img = 'img/Happy.png';
+		duration = '10s';
 		width = 'width';
 		height = 'height';
+		// secretMonkey stretch goal
+		// name = 'secretMonkey';
+		// img = 'img/Secret.png';
+		// duration = '8s';
+		// width = 'width';
+		// height = 'height';
 	}
 	// save selection as a variable
 	let userCharacter = SpaceMonkey(name, img, duration, width, height);
