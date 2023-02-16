@@ -15,6 +15,8 @@ let userCharacter = null;
 // create start button event after character is chosen, countdown clock begins
 document.getElementById('gameStart').addEventListener('click', startTimer);
 
+userCharacter.setOribit();
+
 // get data from localStorage
 function pageLoad() {
 
