@@ -20,19 +20,24 @@ function pageLoad() {
 
 	// use the key you set earlier
 	let getUserCharacter = localStorage.getItem('userCharacter');
+	let getPlayerUsername = localStorage.getItem('playerUsername');
 
 	// confirm data was returned from localStorage
 	if (getUserCharacter) {
 		// console.log(getUserCharacter);
 
 		// TODO: unpack the data and change it back to JS from a string
-		let parsedData = JSON.parse(getUserCharacter);
-		// console.log(parsedData);
+		let parsedCharacterData = JSON.parse(getUserCharacter);
+		console.log(parsedCharacterData);
 
 		// TODO: separate the parsed data and assign to variables?
 		// what does parsedData console.log as? an array? object?
 		// we need to return the saved userCharacter and playerUsername
 
+	}
+	if (getPlayerUsername) {
+		let parsedUsernameData = JSON.parse(getPlayerUsername);
+		console.log(parsedUsernameData);
 	}
 };
 pageLoad();
