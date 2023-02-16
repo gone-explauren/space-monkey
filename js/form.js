@@ -92,10 +92,9 @@ function renderQuestions() {
 
 	// add to the form
 	let username = document.createElement('input');
-	username.textContent('What is your name?');
-	document.getElementById('getusername').appendChild.username;
-	let playerUsername = input.toLowercase;
-	// console.log(playerUsername)
+	username.id = 'usernameSubmit';
+	username.textContent = 'What is your name?';
+	document.getElementById('getusername').appendChild(username);
 
 	let q1h1 = document.createElement('h1');
 	q1h1.textContent(randQ1);
@@ -528,6 +527,8 @@ function renderQuestions() {
 // render the form and all questions when Start button is clicked
 document.getElementById('pressStart').addEventListener('click', renderQuestions);
 
+
+
 // SpaceMonkey Constructor
 function SpaceMonkey(name, img, duration, width, height) {
 	this.name = name
@@ -584,6 +585,7 @@ function selectCharacter() {
 	}
 };
 
+
 function renderMonkey() {
 	// function SpaceMonkey(name, img, duration, width, height)
 	let name, img, duration, width, height;
@@ -627,13 +629,27 @@ function renderMonkey() {
 	let userCharacter = SpaceMonkey(name, img, duration, width, height);
 	// invoke the methods on userCharacter
 	userCharacter.setOribit();
+	return userCharacter;
 };
 
+function handleSubmit(event) {
+	event.preventDefault();
+
+	let userCharater = renderMonkey();
+
+	let playerUsername = document.getElementById('usernameSubmit').value.toLowerCase();
+	// console.log(playerUsername)
+
+	saveUserData(playerUsername, userCharacter);
+}
+
+document.getElementById('startGame').addEventListener('submit', handleSubmit)
+
 // saving data to local storage
-function saveUserData() {
+function saveUserData(userCharacter, playerUsername) {
 	// pack it.. 
 	let stringify = JSON.stringify(userCharacter, playerUsername);
-
+	
 	// label it ('the key') and store it
 	localStorage.setItem('userCharacter', stringify);
 };

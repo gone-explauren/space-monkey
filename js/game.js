@@ -9,7 +9,9 @@ let wins = 0;
 let totalWinsArray = [];
 let winnersArray = [];
 
-// TODO: create start button event after character is chosen, countdown clock begins
+let userCharacter = null;
+
+// create start button event after character is chosen, countdown clock begins
 document.getElementById('gameStart').addEventListener('click', startTimer);
 
 // get data from localStorage
@@ -27,12 +29,12 @@ function pageLoad() {
 		// console.log(parsedData);
 
 		// TODO: separate the parsed data and assign to variables?
-
+		
 	}
 };
 pageLoad();
 
-// TODO: function to select a computer player (NOT the same character as human player, NOT secretMonkey, selected AFTER start button is pressed, before countdown)
+// function to select a computer player (NOT the same character as human player, NOT secretMonkey, selected AFTER start button is pressed, before countdown)
 function computerPlayer() {
 	if (userCharacter === happyMonkey){
 		// randomly select between remaining monkeys
@@ -72,7 +74,7 @@ if (gamePlay) {
 };
 
 
-// TODO: create countdown ID in html: <div id="countdown"></div>
+// create countdown ID in html:
 // credit: https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
 let timeleft = 3;
 let startTimer = setInterval(function(){
@@ -89,33 +91,37 @@ let startTimer = setInterval(function(){
 // TODO: function to track laps (3 laps per round)
 function trackLaps() {
 	while (laps <= 3) {
-		// laps ++ when the characters pass a certain point
+		// set timeout
+		// userCharacter.duration = laps ++;
 	}
 };
 
-// TODO: function to track rounds (3 rounds per game)
+// function to track rounds (3 rounds per game)
 function trackRounds() {
 	while (rounds <= 3) {
 		if (laps === 3) {
 			rounds ++;
 		}
 	}
+	// this is currently set so the user wins every time. Change this with new updates to functionality :)
 	if (rounds === 4) {
-		// if (userCharacter wins?) {
-		//	wins ++
-		// }
-		// else {
+		if (userCharacter.duration < computerOrbit.duration) {
+			wins ++
+			// display "congrats" message
+		}
+		else {
 			// display "too bad" message
-		// }
+		}
 	}
 };
 
-// TODO: push winner username and wins to empty array
+// push winner username and wins to empty array
+// the user wins every time, the username is automatically pushed to the array.
 function saveWinner() {
-	// if (userCharacter wins) {
-		// winnersArray.push(username);
-		// totalWinsArray.push(wins);
-	//	}
+	if (rounds === 4) {
+		winnersArray.push(username);
+		totalWinsArray.push(wins);
+	}
 };
 
 // saving data to local storage
