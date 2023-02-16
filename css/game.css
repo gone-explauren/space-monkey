@@ -17,12 +17,22 @@
 
 body {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   background: var(--layoutColor6);
+}
+
+h1 {
+  font-family: 'Shader Inline';
+  font-size: 40pt;
 }
 
 #theSun {
   position: fixed;
-  top: calc(50% - 150px);
+  top: calc(65% - 150px);
   left: calc(50% - 150px);
   width: 200px;
   height: 200px;
@@ -40,44 +50,44 @@ body {
 
 #userOrbit {
   position: absolute;
-  top:130px;
-  left:260px;
+  top:13rem;
+  left:9rem;
   width: 320px;
   height: 320px;
   border: 4px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-right 9s linear infinite;
-  animation: spin-right 5s ellipse infinite;
+  -webkit-animation: spin-right 1s linear infinite;
+  animation: spin-right 10s linear infinite;
 }
 
 .computerImage {
   position: absolute;
   top: 62px;
   left: -6px;
-  height: 40px;
-  width: 40px;
+  height: 70px;
+  width: 70px;
   border-radius: 100%;
   background-color: #9F98E6;
 }
 
 #computerOrbit {
   position: relative;
-  top: 15px;
-  left: 160px;
+  top: 5rem;
+  left: 10rem;
   width: 224px;
   height: 224px;
   border: 4px #4A437F dotted;
   border-radius: 100%;
   -webkit-animation: spin-right 40s linear infinite;
-  animation: spin-right 20s linear infinite;
+  animation: spin-right 10s linear infinite;
 }
 
 .userImage {
   position: relative;
   top: -17px;
   left: 125px;
-  height: 30px;
-  width: 30px;
+  height: 70px;
+  width: 70px;
   border-radius: 100%;
   background-color: #00FFCA;
 }
@@ -90,4 +100,14 @@ body {
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+#gameplayContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Shader Inline', sans-serif;
+  font-size: 12pt;
+  color: var(--spaceMonkey1);
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,16 @@
   <link rel="stylesheet" href="/css/game.css">
   <title>Space Monkeys: The Game</title>
 </head>
-<h1>SpaceMonkeys</h1>
 <header>
+  <h1>SpaceMonkeys</h1>
   <div id="countdown"></div>
+  <div id="gameplayContainer">
+    <h4 id="nameID">Player: Name</h4>
+    <h4 id="lapID">Lap: 3</h4>
+    <h4 id="roundID">Round: 1</h4>
+  </div>
 </header>
+
 <body>
   <div id="player"></div>
   <div id="theSun"></div>
@@ -26,5 +33,7 @@
   <div id="spaceMonkey1"></div>
   <div id="spaceMonkey2"></div>
 </body>
+
 <script src='../js/game.js'></script>
+
 </html>
