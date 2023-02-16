@@ -25,6 +25,8 @@ body {
   background: var(--layoutColor6);
 }
 
+html
+
 h1 {
   font-family: 'Shader Inline';
   font-size: 40pt;
@@ -54,9 +56,9 @@ h1 {
   left:9rem;
   width: 320px;
   height: 320px;
-  border: 4px #4A437F dotted;
+  border: 1px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-right 1s linear infinite;
+  -webkit-animation: spin-right 10s linear infinite;
   animation: spin-right 10s linear infinite;
 }
 
@@ -72,14 +74,14 @@ h1 {
 
 #computerOrbit {
   position: relative;
-  top: 5rem;
+  top: 2.5rem;
   left: 10rem;
-  width: 224px;
-  height: 224px;
-  border: 4px #4A437F dotted;
+  width: 260px;
+  height: 260px;
+  border: 1px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-right 40s linear infinite;
-  animation: spin-right 10s linear infinite;
+  -webkit-animation: spin-right 13s linear infinite;
+  animation: spin-right 13s linear infinite;
 }
 
 .userImage {

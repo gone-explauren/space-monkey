@@ -59,7 +59,7 @@ a:hover {
   padding-right: 2rem;
 }
 
-.listSubject {
+#theScores {
   border-bottom: 3px solid var(--spaceMonkey2);
 }
 
