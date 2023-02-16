@@ -43,6 +43,23 @@ body::after {
   background-image: linear-gradient(0deg, transparent, black 60%);
 }
 
+.navlinks2 {
+  color: whitesmoke;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  top: 0px;
+  background-color: rgb(255, 255, 6);
+  width: 5rem;
+  padding: 6px 6px;
+  border-radius: 15px;
+  border: solid red;
+  right: 10rem;
+  position: relative;
+  text-align: center;
+  height: 6rem;
+}
+
 .insideSpace {
   font-family: "Oswald", sans-serif;
   font-style: italic;
@@ -204,6 +221,7 @@ body::after {
   /*background-image: linear-gradient(0deg, transparent, black 60%);*/
   z-index: -1;
 }
+
 .description {
   display: flex;
   justify-content: center;
@@ -226,22 +244,23 @@ body::after {
   animation: crawl 60s linear;
 }
 
-.crawl > .title {
+.crawl>.title {
   font-size: 90%;
   text-align: center;
 }
 
-.crawl > .title h2 {
+.crawl>.title h2 {
   margin: 0 0 100px;
   text-transform: uppercase;
 }
 
 @keyframes crawl {
-	0% {
+  0% {
     top: -100px;
-    transform: rotateX(20deg)  translateZ(0);
+    transform: rotateX(20deg) translateZ(0);
   }
-	100% { 
+
+  100% {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
   }
