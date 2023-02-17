@@ -25,8 +25,6 @@ body {
   background: var(--layoutColor6);
 }
 
-html
-
 h1 {
   font-family: 'Shader Inline';
   font-size: 40pt;
@@ -53,34 +51,34 @@ h1 {
 #userOrbit {
   position: absolute;
   top:15rem;
-  left:17rem;
+  left:15rem;
   width: 320px;
   height: 320px;
-  border: 1px #4A437F dotted;
+  border: 4px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-right 3s linear infinite;
-  animation: spin-right 3s linear infinite;
+  -webkit-animation: spin-right 1s linear infinite;
+  animation: spin-right 10s linear infinite;
 }
 
 .computerImage {
   position: absolute;
   top: 62px;
   left: -6px;
-  height: 70px;
-  width: 70px;
+  /* height: 70px;
+  width: 70px; */
   border-radius: 100%;
   background-color: #9F98E6;
 }
 
 #computerOrbit {
   position: relative;
-  top: 3rem;
+  top: 5rem;
   left: 10rem;
-  width: 260px;
-  height: 260px;
-  border: 1px #4A437F dotted;
+  width: 224px;
+  height: 224px;
+  border: 4px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-right 10s linear infinite;
+  -webkit-animation: spin-right 40s linear infinite;
   animation: spin-right 10s linear infinite;
 }
 
@@ -88,8 +86,8 @@ h1 {
   position: relative;
   top: -17px;
   left: 125px;
-  height: 70px;
-  width: 70px;
+  /* height: 70px;
+  width: 70px; */
   border-radius: 100%;
   background-color: #00FFCA;
 }
@@ -114,7 +112,7 @@ h1 {
   color: var(--spaceMonkey1);
 }
 
-/* TODO: make style changes for the popup
+/* TODO: make style changes for the popup */
 /* ths was pulled straight from the internet with not customization made */
 /* The Modal (background) */
 .modal {
@@ -153,4 +151,4 @@ h1 {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-} */
+}
