@@ -604,7 +604,7 @@ footer {
     -moz-animation: fadeIn ease 5s;
     -o-animation: fadeIn ease 5s;
     -ms-animation: fadeIn ease 5s;
-    margin: 0;
+    margin:0;
     bottom: 10rem;
     right: 13rem
   }
