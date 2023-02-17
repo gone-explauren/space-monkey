@@ -15,27 +15,49 @@
   --layoutColor7: #44008B;
 }
 
+html {
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding-bottom: 0;
+}
+
 body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  background: var(--layoutColor6);
+  background-image: linear-gradient(to bottom, rgba(245, 245, 245, 0.12), rgba(9, 14, 81, 0.99)), url(../img/galaxyimage.png);
+  text-align: center;
+  padding-bottom: 0%;
 }
 
 h1 {
   font-family: 'Shader Inline';
   font-size: 40pt;
+  background: -webkit-linear-gradient(#29EE4A, #EE3700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid transparent;
+}
+
+h1:hover {
+  font-family: 'Shader Inline';
+  font-size: 30pt;
+  background: -webkit-linear-gradient (#EE3700, #29EE4A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid transparent;
+  transition: ease-in-out 1s;
 }
 
 #theSun {
   position: fixed;
-  top: calc(65% - 150px);
-  left: calc(50% - 150px);
-  width: 200px;
-  height: 200px;
+  top: calc(65% - 300px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   box-shadow:
     inset 0 0 50px #fff,
@@ -51,12 +73,12 @@ h1 {
 #userOrbit {
   position: absolute;
   top:15rem;
-  left:15rem;
-  width: 320px;
-  height: 320px;
+  left: 18rem;
+  width: 345px;
+  height: 345px;
   border: 4px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-right 1s linear infinite;
+  -webkit-animation: spin-right 10git s linear infinite;
   animation: spin-right 10s linear infinite;
 }
 
@@ -72,24 +94,28 @@ h1 {
 
 #computerOrbit {
   position: relative;
-  top: 5rem;
-  left: 10rem;
-  width: 224px;
-  height: 224px;
+  top: 2rem;
+  left: 16rem;
+  width: 324px;
+  height: 324px;
   border: 4px #4A437F dotted;
   border-radius: 100%;
   -webkit-animation: spin-right 40s linear infinite;
-  animation: spin-right 10s linear infinite;
+  animation: spin-right 4s linear infinite;
 }
 
 .userImage {
   position: relative;
   top: -17px;
-  left: 125px;
+  left: 135px;
   /* height: 70px;
   width: 70px; */
   border-radius: 100%;
   background-color: #00FFCA;
+}
+
+img {
+  transform: rotate(88deg);
 }
 
 @-webkit-keyframes spin-right {

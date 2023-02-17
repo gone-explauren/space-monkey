@@ -48,7 +48,7 @@ console.log(parsedUserCharacter.orbitDuration);
 
 function setOrbits() {
 	let getOrbit = document.getElementById('userOrbit');
-	getOrbit.style.animationDuration = `${3}s`;
+	getOrbit.style.animationDuration = `${2.5}s`;
 
 	let lapNumber = 0;
 	let lapLimit = 3;
