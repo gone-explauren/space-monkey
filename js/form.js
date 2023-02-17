@@ -593,7 +593,7 @@ function renderMonkey() {
     // let happyMonkey = new SpaceMonkey('pass in values');
     name = "happyMonkey";
     img = "img/Happy.png";
-    duration = "10s";
+    duration = 10;
     width = "width";
     height = "height";
   } else if (
@@ -603,7 +603,7 @@ function renderMonkey() {
   ) {
     name = "madMonkey";
     img = "img/Mad.png";
-    duration = "15s";
+    duration = 15;
     width = "width";
     height = "height";
   } else if (
@@ -613,7 +613,7 @@ function renderMonkey() {
   ) {
     name = "neutralMonkey";
     img = "img/Neutral.png";
-    duration = "17s";
+    duration = 17;
     width = "width";
     height = "height";
   } else if (
@@ -623,14 +623,14 @@ function renderMonkey() {
   ) {
     name = "coolMonkey";
     img = "img/Cool.png";
-    duration = "12s";
+    duration = 12;
     width = "width";
     height = "height";
   } else {
     // happyMonkey placeholder
     name = "happyMonkey";
     img = "img/Happy.png";
-    duration = "10s";
+    duration = 10;
     width = "width";
     height = "height";
     // secretMonkey stretch goal

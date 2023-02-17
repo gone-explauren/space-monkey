@@ -52,14 +52,14 @@ h1 {
 
 #userOrbit {
   position: absolute;
-  top:13rem;
-  left:9rem;
+  top:15rem;
+  left:17rem;
   width: 320px;
   height: 320px;
   border: 1px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-right 10s linear infinite;
-  animation: spin-right 10s linear infinite;
+  -webkit-animation: spin-right 3s linear infinite;
+  animation: spin-right 3s linear infinite;
 }
 
 .computerImage {
@@ -74,14 +74,14 @@ h1 {
 
 #computerOrbit {
   position: relative;
-  top: 2.5rem;
+  top: 3rem;
   left: 10rem;
   width: 260px;
   height: 260px;
   border: 1px #4A437F dotted;
   border-radius: 100%;
-  -webkit-animation: spin-right 13s linear infinite;
-  animation: spin-right 13s linear infinite;
+  -webkit-animation: spin-right 10s linear infinite;
+  animation: spin-right 10s linear infinite;
 }
 
 .userImage {
